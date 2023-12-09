@@ -1,6 +1,19 @@
+# Spotify Dataset Analysis
+#### Authors: [Jack Rutherford](https://github.com/jack-rutherford) & [Clara Voskuil](https://github.com/claravoskuil)
+
+### Overview
+For the [30000 Spotify Songs Dataset](https://www.kaggle.com/datasets/joebeachcapital/30000-spotify-songs/data) we decided to perform two different types of supervised learning problems to attempt to predict the track_popularity and playlist_genre. We performed regression and classification problems (respectively). This dataset comes from Spotify and contains information regarding 30,000 Spotify Songs (observations), including track ID, artist, popularity, album name, genre, popularity rating,  release date, etc. In total, each observation has 23 columns associated with these variables. Thus, the data table is of size 30,000 by 23. For our specific problems, based on the information available, we will aim to learn more about how certain parameters lend themselves to unique songs, and how such parameters may interact with one another to affect a song’s popularity.
+
+### Regression
+The question we are choosing to address is as follows: what determines a song’s popularity rating? Here, the response variable is the song’s popularity ranking (on a scale of 0-100, where a higher score indicates higher popularity). While song popularity may intuitively seem subjective, we hope to entertain the possibility that certain predictor variables in the dataset show a correlation with a higher or lower popularity rating. Some of the predictors to be explored include genre, release date, danceability, energy, key, loudness, mode, speechiness, acousticness, instrumentalness, liveness, valence, tempo, and duration. For a holistic consideration of these variables, both single-variable linear regression and multiple linear regression techniques will be implemented. Single linear regression can provide an overall view of how individual variables affect popularity ratings, while multiple linear regression allows for a more complex and comprehensive analysis, including interactions between the predictor variables themselves.
+
+### Classification
+For the classification of the data, we hope to explore how a song’s genre is categorized, where genre is the response variable. Music genre is often used to classify song tracks as well as individual music tastes. From data classification of the Spotify dataset, we will explore whether or not predictor variables such as danceability, energy, key, loudness, mode, speechiness, acousticness, instrumentalness, liveness, valence, tempo, or duration may contribute to how song tracks are identified as belonging to a specific category of music genre. To perform classification on this dataset, we utilize PCA to help reduce the dimensionality of the dataset, and a handful of classification models such as Logistic Regression, LDA, QDA, Gaussian Naïve Bayes, and Random Forest Classification.
+
+
 ![@neonbrand via Unsplash - person holding space gray iPhone 6](https://images.unsplash.com/photo-1495434942214-9b525bba74e9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80)
 
-# Spotify Songs
+# Spotify Songs Dataset
 
 The data this week comes from Spotify via the [`spotifyr` package](https://www.rcharlie.com/spotifyr/). [Charlie Thompson](https://twitter.com/_RCharlie), [Josiah Parry](https://twitter.com/JosiahParry), Donal Phipps, and Tom Wolff authored this package to make it easier to get either your own data or general metadata arounds songs from Spotify's API. Make sure to check out the [`spotifyr` package](https://www.rcharlie.com/spotifyr/) website to see how you can collect your own data!
 
